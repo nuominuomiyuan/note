@@ -1,0 +1,5 @@
+﻿安装完后打开Git Bash输入命令：
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+git init命令把这个目录变成Git可以管理的仓库
