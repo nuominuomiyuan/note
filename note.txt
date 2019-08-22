@@ -3,3 +3,21 @@ git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 
 git init命令把这个目录变成Git可以管理的仓库
+
+git add <file>命令把修改添加到暂存区
+git commit -m <message>命令把暂存区的所有内容提交到当前分支
+
+git log --pretty=oneline命令显示从最近到最远的提交日志
+
+git reset --hard HEAD^命令回退到上一个版本
+git reset --hard <id>命令回退到指定版本
+
+场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout -- <file>。
+场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
+场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。
+
+git rm <file>删除一个文件
+
+git remote add origin git@github.com:nuominuomiyuan/note.git 本地仓库与与GitHub仓库关联（远程库是空的）
+git push -u origin master 把本地库的所有内容推送到远程库上
+git push origin master 把本地库的所有内容推送到远程库上
